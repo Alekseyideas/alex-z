@@ -1,0 +1,27 @@
+// Colors
+//--------------------
+$colors: (primary: #123D3C,
+  accent: #247D7A,
+  accentHover: #37BDB8,
+  accentActive: #42E3DE);
+
+@function color($colorSelect) {
+  @return map_get($colors, $colorSelect)
+}
+
+;
+
+
+body {
+  color: color(primary);
+  background: #ebeef1;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: color(accent);
+  }
+}

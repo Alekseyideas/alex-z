@@ -1,11 +1,12 @@
 module.exports = {
 	siteMetadata: {
-		title: 'Gatsby Default Starter',
+		title: 'Aleksey Zelenskiy - Full Stack developer',
 		description:
-			'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
-		author: '@gatsbyjs',
+			'Developer with 5+ years of experience in building websites and applications for various companies. 2+ years of experience in web design.',
+		author: '@alekseyideas',
 	},
 	plugins: [
+		'gatsby-plugin-sass',
 		'gatsby-plugin-typescript',
 		'gatsby-plugin-react-helmet',
 		{
@@ -23,6 +24,14 @@ module.exports = {
 				displayName: false,
 			},
 		},
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'images',
+				path: `${__dirname}/src/assets/images`,
+			},
+		},
+		'gatsby-background-image-es5',
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
